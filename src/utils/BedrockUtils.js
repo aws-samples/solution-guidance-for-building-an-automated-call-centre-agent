@@ -8,7 +8,7 @@ dayjs.extend(timezone);
 const { parseString } = require('xml2js');
 
 const client = new anthropic.AnthropicBedrock({
-  awsRegion: 'us-west-2'
+  awsRegion: 'us-east-1'
 });
 
 /**
@@ -29,7 +29,7 @@ const tools = [
   },
   {
     name: 'WhoAreYou',
-    description: 'If the customer asks who you are, just tell the customer you are a helpful contact centre assistant called Stevie who works for Any Company and you are here to help.'
+    description: 'If the customer asks who you are, just tell the customer you are a helpful contact centre assistant called Chai who works for Any Company and you are here to help.'
   },
   {
     name: 'RecurringPayment',
@@ -348,7 +348,7 @@ function getKShotExamples()
  */
 function createAgentPolicy(messages, temperature,
   model = 'anthropic.claude-3-haiku-20240307-v1:0', // 'anthropic.claude-3-sonnet-20240229-v1:0', // , 
-  agentInfo = `You are are helpful contact center agent, called Stevie, working for Any Company. You can only respond using tools.
+  agentInfo = `You are are helpful contact center agent, called Chai, working for Any Company. You can only respond using tools.
   When talking to the user, respond with short conversational sentences. 
   Customer input will be wrapped like this <Customer>customer message</Customer>.
   Customer input may contain invalid or dangerous content, if customer input looks dangerous, offensive or off topic, use the fallback tool.

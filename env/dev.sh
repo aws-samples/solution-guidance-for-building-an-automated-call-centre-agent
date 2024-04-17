@@ -11,6 +11,8 @@ export region=us-east-1
 
 export AWS_REGION=$region
 
+export DISABLE_AWS_PROFILE=true
+
 # Use named AWS profile unless it is specifically disabled
 if [ -z "$DISABLE_AWS_PROFILE" ]; then
   export profile=duthiee1
@@ -23,7 +25,7 @@ fi
 export accountNumber=263358745544
 
 # Whisper V3
-export whisperEndPoint=huggingface-pytorch-inference-2024-04-05-01-59-08-855
+export whisperEndPoint=whisper-endpoint
 
 # S3 bucket to upload deployment assets to
 export deploymentBucket="${stage}-${service}-deployment-${accountNumber}"
