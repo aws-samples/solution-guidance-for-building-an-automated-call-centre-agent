@@ -9,6 +9,9 @@ export service=connectvoice
 # Target AWS deployment region
 export region=us-east-1
 
+# Bedrock region
+export bedrockRegion=us-east-1
+
 export AWS_REGION=$region
 
 export DISABLE_AWS_PROFILE=true

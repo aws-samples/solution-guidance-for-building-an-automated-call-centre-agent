@@ -8,7 +8,7 @@ dayjs.extend(timezone);
 const { parseString } = require('xml2js');
 
 const client = new anthropic.AnthropicBedrock({
-  awsRegion: 'us-east-1'
+  awsRegion: process.env.BEDROCK_REGION
 });
 
 /**
