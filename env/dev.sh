@@ -7,10 +7,10 @@ export stage=dev
 export service=connectvoice
 
 # Target AWS deployment region
-export region=us-east-1
+export region=us-west-2
 
 # Bedrock region
-export bedrockRegion=us-east-1
+export bedrockRegion=us-west-2
 
 export AWS_REGION=$region
 
