@@ -25,7 +25,7 @@ if [ -z "$DISABLE_AWS_PROFILE" ]; then
 fi
 
 # AWS account number
-export accountNumber=<insert your AWS account number here>
+export accountNumber=$(aws sts get-caller-identity --query Account --output text)
 
 # Whisper V3
 export whisperEndPoint=whisper-endpoint
